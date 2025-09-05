@@ -8,6 +8,9 @@ public class test : MonoBehaviour
     void Start()
     {
         Debug.Log("Hello, World");
+            Rigidbody rb = GetComponent<Rigidbody>();
+    rb.AddForce(100.0f, 200.0f, -100.0f); // 加える力のベクトルをVectorで入れる
+
     }
 
     // Update is called once per frame
