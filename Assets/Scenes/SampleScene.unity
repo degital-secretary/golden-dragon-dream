@@ -133,7 +133,6 @@ GameObject:
   - component: {fileID: 33589479}
   - component: {fileID: 33589483}
   - component: {fileID: 33589484}
-  - component: {fileID: 33589485}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -237,7 +236,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33589478}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 479c50d1f040947a9b1c3815a7681a19, type: 3}
   m_Name: 
