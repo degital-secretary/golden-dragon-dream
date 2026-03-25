@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3750c9faf70f343e091e801f7a6ac1e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetSceneName: 
+  sceneToLoad: SampleScene_Copy
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0

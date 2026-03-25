@@ -1,41 +1,33 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-#if ENABLE_INPUT_SYSTEM
-using UnityEngine.InputSystem;
-#endif
-
 public class SceneSwitcher : MonoBehaviour
 {
-    [Tooltip("切り替えたいシーン名を指定。空欄なら Build Settings の次のシーンへ移動")]
-    public string targetSceneName = "";
+    [Header("設定")]
+    [Tooltip("Bキーを押した時に遷移するシーン名")]
+    [SerializeField] private string sceneToLoad;
+
+    private bool _isTransitioning = false; // 二重遷移防止用
 
     void Update()
     {
-#if ENABLE_INPUT_SYSTEM
-        if (Keyboard.current != null && Keyboard.current.bKey.wasPressedThisFrame)
+        // Bキーが押されたかチェック
+        if (Input.GetKeyDown(KeyCode.B) && !_isTransitioning)
         {
             SwitchScene();
         }
-#else
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            SwitchScene();
-        }
-#endif
     }
 
     private void SwitchScene()
     {
-        if (!string.IsNullOrEmpty(targetSceneName))
+        if (string.IsNullOrEmpty(sceneToLoad))
         {
-            SceneManager.LoadScene(targetSceneName);
+            Debug.LogError("遷移先のシーン名が設定されていません！インスペクターから入力してください。");
             return;
         }
 
-        int current = SceneManager.GetActiveScene().buildIndex;
-        int count = SceneManager.sceneCountInBuildSettings;
-        int next = (current + 1) % Mathf.Max(1, count);
-        SceneManager.LoadScene(next);
+        _isTransitioning = true;
+        Debug.Log($"シーン {sceneToLoad} へ遷移します...");
+        SceneManager.LoadScene(sceneToLoad);
     }
 }
