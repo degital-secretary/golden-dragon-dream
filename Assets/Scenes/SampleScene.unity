@@ -334,6 +334,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: SampleScene_Copy
+--- !u!1 &238370959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5914173764048766335, guid: 3907b18f8ebd64608b2ed025b024ea9a, type: 3}
+  m_PrefabInstance: {fileID: 1842625039}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &238370961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238370959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66e8ca12645a4a27b0707977158c44e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BlinkController
+  eyelidRenderer: {fileID: 0}
+  blendShapeIndex: 0
+  minBlinkInterval: 2
+  maxBlinkInterval: 5
+  blinkSpeed: 0.08
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,7 +805,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5914173764048766335, guid: 3907b18f8ebd64608b2ed025b024ea9a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 238370961}
   m_SourcePrefab: {fileID: 100100000, guid: 3907b18f8ebd64608b2ed025b024ea9a, type: 3}
 --- !u!1 &1850909768
 GameObject:
