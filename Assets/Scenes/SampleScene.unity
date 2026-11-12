@@ -1122,10 +1122,32 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3907b18f8ebd64608b2ed025b024ea9a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1842625041}
     - targetCorrespondingSourceObject: {fileID: 5914173764048766335, guid: 3907b18f8ebd64608b2ed025b024ea9a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 238370961}
   m_SourcePrefab: {fileID: 100100000, guid: 3907b18f8ebd64608b2ed025b024ea9a, type: 3}
+--- !u!1 &1842625040 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3907b18f8ebd64608b2ed025b024ea9a, type: 3}
+  m_PrefabInstance: {fileID: 1842625039}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1842625041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842625040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05350da898190428bb0f5c824c6d6315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MeochonFloatObserver
+  floatSpeed: 2
+  floatHeight: 0.5
 --- !u!1 &1850909768
 GameObject:
   m_ObjectHideFlags: 0
